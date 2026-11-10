@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 130" width="680" height="130">
+  <defs>
+    <linearGradient id="goldTextGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5E8C3" />
+      <stop offset="50%" stop-color="#D4B565" />
+      <stop offset="100%" stop-color="#A98734" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Primary Brand Name: JRV'S -->
+  <text x="10" y="58" font-family="'Playfair Display', Georgia, serif" font-size="52" font-weight="800" letter-spacing="3" fill="url(#goldTextGrad)">
+    JRV'S
+  </text>
+  
+  <!-- Modern Clean Tagline: OFFICE FURNITURES & SERVICES -->
+  <text x="12" y="92" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" letter-spacing="6" fill="#FFFFFF">
+    OFFICE FURNITURES AND SERVICES
+  </text>
+  
+  <!-- Subtle Architectural Accent Line -->
+  <line x1="12" y1="108" x2="420" y2="108" stroke="url(#goldTextGrad)" stroke-width="2" stroke-linecap="round" />
+</svg>

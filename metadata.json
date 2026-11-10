@@ -1,0 +1,6 @@
+{
+  "name": "JRV's Office Furnitures and Services",
+  "description": "Commercial contractor specializing in modern office fit-outs, partitions, desking, blinds, and flooring across Metro Manila and Luzon.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

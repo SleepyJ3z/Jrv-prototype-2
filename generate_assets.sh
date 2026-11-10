@@ -1,0 +1,77 @@
+cat << 'SVG1' > images/logo.svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E7BE" />
+      <stop offset="40%" stop-color="#D4B565" />
+      <stop offset="100%" stop-color="#9E7F30" />
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D5A42" />
+      <stop offset="100%" stop-color="#142B1F" />
+    </linearGradient>
+    <filter id="subtleGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  
+  <!-- Outer Shield / Hexagonal Emblem Frame -->
+  <polygon points="200,16 364,106 364,294 200,384 36,294 36,106" 
+           fill="url(#greenGrad)" stroke="url(#goldGrad)" stroke-width="8" stroke-linejoin="round" filter="url(#subtleGlow)"/>
+  
+  <!-- Inner Architectural Accent Ring -->
+  <polygon points="200,36 344,116 344,284 200,364 56,284 56,116" 
+           fill="none" stroke="url(#goldGrad)" stroke-width="2" stroke-dasharray="8 6" opacity="0.6"/>
+
+  <!-- Architectural Isometric Cube / Desk Motif Top Accent -->
+  <g transform="translate(200,120) scale(0.95)">
+    <!-- JRV Monogram in Champagne Gold -->
+    <!-- Stylized J -->
+    <path d="M -75,-30 L -45,-30 L -45,55 Q -45,95 -80,95 Q -105,95 -115,75 L -92,52 Q -88,65 -78,65 Q -65,65 -65,50 L -65,-30 Z" fill="url(#goldGrad)" />
+    
+    <!-- Stylized R -->
+    <path d="M -30,-30 L 25,-30 Q 65,-30 65,10 Q 65,38 35,46 L 70,95 L 40,95 L 10,50 L -8,50 L -8,95 L -30,95 Z M -8,-8 L 22,-8 Q 42,-8 42,10 Q 42,28 22,28 L -8,28 Z" fill="url(#goldGrad)" />
+    
+    <!-- Stylized V -->
+    <path d="M 55,-30 L 80,-30 L 105,58 L 130,-30 L 155,-30 L 118,95 L 92,95 Z" fill="url(#goldGrad)" />
+  </g>
+  
+  <!-- Architectural Foundation Bar -->
+  <rect x="110" y="275" width="180" height="4" rx="2" fill="url(#goldGrad)" />
+  
+  <!-- Small Star / Diamond Accent -->
+  <polygon points="200,288 206,296 200,304 194,296" fill="#F3E7BE" />
+  
+  <!-- Subtitle Tag -->
+  <text x="200" y="324" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="5" fill="#F3E7BE" text-anchor="middle">EST. PHILIPPINES</text>
+</svg>
+SVG1
+
+cat << 'SVG2' > images/logotext.svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 130" width="680" height="130">
+  <defs>
+    <linearGradient id="goldTextGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5E8C3" />
+      <stop offset="50%" stop-color="#D4B565" />
+      <stop offset="100%" stop-color="#A98734" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Primary Brand Name: JRV'S -->
+  <text x="10" y="58" font-family="'Playfair Display', Georgia, serif" font-size="52" font-weight="800" letter-spacing="3" fill="url(#goldTextGrad)">
+    JRV'S
+  </text>
+  
+  <!-- Modern Clean Tagline: OFFICE FURNITURES & SERVICES -->
+  <text x="12" y="92" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" letter-spacing="6" fill="#FFFFFF">
+    OFFICE FURNITURES AND SERVICES
+  </text>
+  
+  <!-- Subtle Architectural Accent Line -->
+  <line x1="12" y1="108" x2="420" y2="108" stroke="url(#goldTextGrad)" stroke-width="2" stroke-linecap="round" />
+</svg>
+SVG2
+
+convert -background none images/logo.svg images/logo.png
+convert -background none images/logotext.svg images/logotext.png
+echo "Generated PNGs successfully"
